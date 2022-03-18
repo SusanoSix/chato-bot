@@ -1,0 +1,526 @@
+{
+  "settings": {
+    "languages": [
+      "en"
+    ],
+    "tag": "nlp",
+    "threshold": 0.5,
+    "autoLoad": true,
+    "autoSave": true,
+    "modelFileName": "model.nlp",
+    "calculateSentiment": true
+  },
+  "nluManager": {
+    "settings": {
+      "tag": "nlu-manager"
+    },
+    "locales": [
+      "en"
+    ],
+    "languageNames": {},
+    "domainManagers": {
+      "en": {
+        "settings": {
+          "locale": "en",
+          "trainByDomain": false,
+          "tag": "domain-manager-en",
+          "nluByDomain": {
+            "default": {
+              "className": "NeuralNlu",
+              "settings": {}
+            }
+          },
+          "useStemDict": true
+        },
+        "stemDict": {
+          "hello": {
+            "intent": "greeting.hello",
+            "domain": "default"
+          },
+          "hi": {
+            "intent": "greeting.hello",
+            "domain": "default"
+          },
+          "yoe": {
+            "intent": "greeting.hello",
+            "domain": "default"
+          },
+          "yoag": {
+            "intent": "greeting.hello",
+            "domain": "default"
+          },
+          "do,it,what": {
+            "intent": "greeting.hello",
+            "domain": "default"
+          },
+          "wassgud": {
+            "intent": "greeting.hello",
+            "domain": "default"
+          },
+          "hey": {
+            "intent": "greeting.hello",
+            "domain": "default"
+          },
+          "goodby": {
+            "intent": "greetings.bye",
+            "domain": "default"
+          },
+          "bye,care,take": {
+            "intent": "greetings.bye",
+            "domain": "default"
+          },
+          "later,see,you": {
+            "intent": "greetings.bye",
+            "domain": "default"
+          },
+          "bye,for,now": {
+            "intent": "greetings.bye",
+            "domain": "default"
+          },
+          "go,i,must": {
+            "intent": "greetings.bye",
+            "domain": "default"
+          },
+          "peac": {
+            "intent": "greetings.bye",
+            "domain": "default"
+          },
+          "gtg": {
+            "intent": "greetings.bye",
+            "domain": "default"
+          }
+        },
+        "intentDict": {
+          "greeting.hello": "default",
+          "greetings.bye": "default"
+        },
+        "sentences": [
+          {
+            "domain": "default",
+            "utterance": "hello",
+            "intent": "greeting.hello"
+          },
+          {
+            "domain": "default",
+            "utterance": "hi",
+            "intent": "greeting.hello"
+          },
+          {
+            "domain": "default",
+            "utterance": "yoe",
+            "intent": "greeting.hello"
+          },
+          {
+            "domain": "default",
+            "utterance": "yoag",
+            "intent": "greeting.hello"
+          },
+          {
+            "domain": "default",
+            "utterance": "what it do",
+            "intent": "greeting.hello"
+          },
+          {
+            "domain": "default",
+            "utterance": "wassgud",
+            "intent": "greeting.hello"
+          },
+          {
+            "domain": "default",
+            "utterance": "Hey",
+            "intent": "greeting.hello"
+          },
+          {
+            "domain": "default",
+            "utterance": "goodbye",
+            "intent": "greetings.bye"
+          },
+          {
+            "domain": "default",
+            "utterance": "bye take care",
+            "intent": "greetings.bye"
+          },
+          {
+            "domain": "default",
+            "utterance": "see you later",
+            "intent": "greetings.bye"
+          },
+          {
+            "domain": "default",
+            "utterance": "bye for now",
+            "intent": "greetings.bye"
+          },
+          {
+            "domain": "default",
+            "utterance": "i must go",
+            "intent": "greetings.bye"
+          },
+          {
+            "domain": "default",
+            "utterance": "peace",
+            "intent": "greetings.bye"
+          },
+          {
+            "domain": "default",
+            "utterance": "gtg",
+            "intent": "greetings.bye"
+          }
+        ],
+        "domains": {
+          "master_domain": {
+            "settings": {
+              "locale": "en",
+              "tag": "nlu-en",
+              "keepStopwords": true,
+              "nonefeatureValue": 1,
+              "nonedeltaMultiplier": 1.2,
+              "spellCheck": false,
+              "spellCheckDistance": 1,
+              "filterZeros": true,
+              "log": true
+            },
+            "features": {
+              "hello": 1,
+              "hi": 1,
+              "yoe": 1,
+              "yoag": 1,
+              "what": 1,
+              "it": 1,
+              "do": 1,
+              "wassgud": 1,
+              "hey": 1,
+              "goodby": 1,
+              "bye": 1,
+              "take": 1,
+              "care": 1,
+              "see": 1,
+              "you": 1,
+              "later": 1,
+              "for": 1,
+              "now": 1,
+              "i": 1,
+              "must": 1,
+              "go": 1,
+              "peac": 1,
+              "gtg": 1
+            },
+            "intents": {
+              "greeting.hello": 1,
+              "greetings.bye": 1
+            },
+            "intentFeatures": {
+              "greeting.hello": {
+                "hello": 1,
+                "hi": 1,
+                "yoe": 1,
+                "yoag": 1,
+                "what": 1,
+                "it": 1,
+                "do": 1,
+                "wassgud": 1,
+                "hey": 1
+              },
+              "greetings.bye": {
+                "goodby": 1,
+                "bye": 1,
+                "take": 1,
+                "care": 1,
+                "see": 1,
+                "you": 1,
+                "later": 1,
+                "for": 1,
+                "now": 1,
+                "i": 1,
+                "must": 1,
+                "go": 1,
+                "peac": 1,
+                "gtg": 1
+              }
+            },
+            "featuresToIntent": {
+              "hello": [
+                "greeting.hello"
+              ],
+              "hi": [
+                "greeting.hello"
+              ],
+              "yoe": [
+                "greeting.hello"
+              ],
+              "yoag": [
+                "greeting.hello"
+              ],
+              "what": [
+                "greeting.hello"
+              ],
+              "it": [
+                "greeting.hello"
+              ],
+              "do": [
+                "greeting.hello"
+              ],
+              "wassgud": [
+                "greeting.hello"
+              ],
+              "hey": [
+                "greeting.hello"
+              ],
+              "goodby": [
+                "greetings.bye"
+              ],
+              "bye": [
+                "greetings.bye"
+              ],
+              "take": [
+                "greetings.bye"
+              ],
+              "care": [
+                "greetings.bye"
+              ],
+              "see": [
+                "greetings.bye"
+              ],
+              "you": [
+                "greetings.bye"
+              ],
+              "later": [
+                "greetings.bye"
+              ],
+              "for": [
+                "greetings.bye"
+              ],
+              "now": [
+                "greetings.bye"
+              ],
+              "i": [
+                "greetings.bye"
+              ],
+              "must": [
+                "greetings.bye"
+              ],
+              "go": [
+                "greetings.bye"
+              ],
+              "peac": [
+                "greetings.bye"
+              ],
+              "gtg": [
+                "greetings.bye"
+              ]
+            },
+            "neuralNetwork": {
+              "settings": {
+                "locale": "en",
+                "tag": "nlu-en",
+                "keepStopwords": true,
+                "nonefeatureValue": 1,
+                "nonedeltaMultiplier": 1.2,
+                "spellCheck": false,
+                "spellCheckDistance": 1,
+                "filterZeros": true,
+                "log": true
+              },
+              "features": [
+                "hello",
+                "hi",
+                "yoe",
+                "yoag",
+                "what",
+                "it",
+                "do",
+                "wassgud",
+                "hey",
+                "goodby",
+                "bye",
+                "take",
+                "care",
+                "see",
+                "you",
+                "later",
+                "for",
+                "now",
+                "i",
+                "must",
+                "go",
+                "peac",
+                "gtg"
+              ],
+              "intents": [
+                "greeting.hello",
+                "greetings.bye"
+              ],
+              "perceptrons": [
+                [
+                  7.0065178871154785,
+                  7.011231899261475,
+                  6.995060920715332,
+                  6.977740287780762,
+                  2.350151777267456,
+                  2.350151777267456,
+                  2.350151777267456,
+                  6.957362651824951,
+                  6.93747615814209,
+                  -7.12926721572876,
+                  -3.650933265686035,
+                  -1.8227094411849976,
+                  -1.8227094411849976,
+                  -2.4237020015716553,
+                  -2.4237020015716553,
+                  -2.4237020015716553,
+                  -1.8083666563034058,
+                  -1.8083666563034058,
+                  -2.4231154918670654,
+                  -2.4231154918670654,
+                  -2.4231154918670654,
+                  -7.093001365661621,
+                  -7.064821243286133,
+                  7.224658443630715
+                ],
+                [
+                  -4.7229743003845215,
+                  -4.708566665649414,
+                  -4.693305015563965,
+                  -4.6772027015686035,
+                  -1.5912519693374634,
+                  -1.5912519693374634,
+                  -1.5912519693374634,
+                  -4.658264636993408,
+                  -4.640267372131348,
+                  9.401230812072754,
+                  4.766191482543945,
+                  2.3830504417419434,
+                  2.3830504417419434,
+                  3.1776928901672363,
+                  3.1776928901672363,
+                  3.1776928901672363,
+                  2.3832921981811523,
+                  2.3832921981811523,
+                  3.177765130996704,
+                  3.177765130996704,
+                  3.177765130996704,
+                  9.382474899291992,
+                  9.351162910461426,
+                  4.768350326388744
+                ]
+              ]
+            }
+          }
+        }
+      }
+    },
+    "intentDomains": {},
+    "extraSentences": [
+      [
+        "en",
+        "hello"
+      ],
+      [
+        "en",
+        "hi"
+      ],
+      [
+        "en",
+        "yoe"
+      ],
+      [
+        "en",
+        "yoag"
+      ],
+      [
+        "en",
+        "what it do"
+      ],
+      [
+        "en",
+        "wassgud"
+      ],
+      [
+        "en",
+        "Hey"
+      ],
+      [
+        "en",
+        "goodbye"
+      ],
+      [
+        "en",
+        "bye take care"
+      ],
+      [
+        "en",
+        "see you later"
+      ],
+      [
+        "en",
+        "bye for now"
+      ],
+      [
+        "en",
+        "i must go"
+      ],
+      [
+        "en",
+        "peace"
+      ],
+      [
+        "en",
+        "gtg"
+      ]
+    ]
+  },
+  "ner": {
+    "settings": {
+      "tag": "ner",
+      "entityPreffix": "%",
+      "entitySuffix": "%"
+    },
+    "rules": {}
+  },
+  "nlgManager": {
+    "settings": {
+      "tag": "nlg-manager"
+    },
+    "responses": {
+      "en": {
+        "greeting.hello": [
+          {
+            "answer": "yer"
+          },
+          {
+            "answer": "wassup w it?"
+          },
+          {
+            "answer": "Hey :)"
+          },
+          {
+            "answer": "henlo"
+          },
+          {
+            "answer": "hisashiburiiiiiiiii!"
+          }
+        ],
+        "greetings.bye": [
+          {
+            "answer": "holla atchu"
+          },
+          {
+            "answer": "peace"
+          },
+          {
+            "answer": "later :)"
+          },
+          {
+            "answer": "good talks babey see u soon"
+          }
+        ]
+      }
+    }
+  },
+  "actionManager": {
+    "settings": {
+      "tag": "action-manager"
+    },
+    "actions": {}
+  },
+  "slotManager": {}
+}

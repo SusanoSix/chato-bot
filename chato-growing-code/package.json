@@ -1,0 +1,16 @@
+{
+  "name": "chatoranekogen",
+  "version": "1.0.0",
+  "description": "",
+  "main": "chato.js",
+  "scripts": {
+    "train": "node train.js",
+    "start": "node chato.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-nlp": "^4.23.2"
+  }
+}
