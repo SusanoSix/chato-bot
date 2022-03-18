@@ -8,7 +8,7 @@ manager.load();
 // Loading a module readline, this will be able to take input from the terminal.
 var readline = require("readline");
 var rl = readline.createInterface(process.stdin, process.stdout);
-console.log("Chatbot started!");
+console.log("chato Deployed!"); //custom start message
 rl.setPrompt("> ");
 rl.prompt();
 rl.on("line", async function (line) {
